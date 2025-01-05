@@ -1,0 +1,16 @@
+{
+  "name": "smart-notes",
+  "version": "1.0.0",
+  "description": "Intelligent cloud-based note-taking and collaboration tool landing",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing",
+    "frontend",
+    "html",
+    "css"
+  ],
+  "author": "aaaaaaaalesha",
+  "license": "ISC"
+}
