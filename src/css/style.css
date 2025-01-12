@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 106%;
+    letter-spacing: -1px;
+    font-size: 59px;
 }
 
 p {
     margin: 0;
+}
+
+strong {
+    background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 a {
@@ -18,6 +37,15 @@ a:hover {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+input {
+    background-color: #EFECE6;
+    border: none;
+}
+
+input:focus {
+    outline: none !important;
 }
 
 ul {
@@ -35,6 +63,7 @@ body {
     color: #EFECE6;
 }
 
+/*Reusable Style Classes*/
 .logo {
     display: flex;
     flex-direction: row;
@@ -53,12 +82,133 @@ body {
     }
 }
 
+.base-button {
+    border: none;
+    background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+}
+
+.base-button:hover,
+.base-button:focus {
+    cursor: pointer;
+    opacity: 0.9;
+    outline: 0;
+}
+
+.button:active {
+    box-shadow: none;
+    margin-top: 6px;
+}
+
+.base-input-container {
+    /*Use for input container shape*/
+    border-radius: 8px;
+    background-color: #EFECE6;
+}
+
+/*Base Classes*/
+#header {
+    a {
+        text-decoration: none;
+    }
+
+    .header__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 96px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 56px;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0;
+    }
+
+    .get-started {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 24px;
+        border-radius: 8px;
+
+
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 128px 152px;
+
+    .hero-section__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 100px;
+
+        .hero-subcontainer {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                font-size: 16px;
+                line-height: 150%;
+
+                .text-wrapper {
+                    color: #BABABA;
+                }
+            }
+
+            .signup-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                padding: 6px 6px 6px 24px;
+                gap: 48px;
+                width: 434px;
+
+                .signup-button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 16px 24px;
+                    border-radius: 8px;
+                    background-color: #EFECE6;
+                }
+            }
+        }
+
+
+    }
+}
 
 .info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     background-color: #080808;
     padding: 80px 160px 88px 144px;
     gap: 100px;
@@ -67,12 +217,36 @@ body {
         display: flex;
         flex-direction: column;
 
+        align-items: flex-start;
+        justify-content: space-between;
+
         .mail-us-subcontainer__logo {
             display: flex;
             flex-direction: row;
             gap: 8px;
         }
+
+        .mail-us-subcontainer__email {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 48px;
+            width: 290px;
+            padding: 8px 16px;
+
+            .email-icon {
+                display: flex;
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
+
 
     .link-subcontainer {
         display: flex;
@@ -92,11 +266,11 @@ body {
         }
 
         .link-list__list {
-
             .link-list__item {
                 font-size: 16px;
                 color: #BABABA;
                 margin-bottom: 5px;
+
                 a {
                     text-decoration: none;
                 }
@@ -106,7 +280,6 @@ body {
     }
 }
 
-
 .bottom-container {
     display: flex;
     flex-direction: row;
@@ -114,26 +287,33 @@ body {
     align-items: center;
     background-color: #048C80;
     padding: 18px 160px 18px 144px;
-}
 
-.socials {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-
-
-    .copyright {
-        font-size: 14px;
-    }
-
-    .social-icon {
+    .socials {
         display: flex;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-        width: 40px;
-        padding: 10px;
-        background-color: #017373;
+        flex-direction: row;
+        gap: 10px;
+
+
+        .copyright {
+            font-size: 14px;
+        }
+
+        .social-icon {
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            background-color: #017373;
+        }
+
+        :hover {
+            cursor: pointer;
+            background-image: linear-gradient(25deg, #AAD9D1 0%, #017373 55%);
+        }
     }
 }
+
+

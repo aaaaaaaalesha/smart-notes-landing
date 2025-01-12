@@ -9,35 +9,62 @@
 
 <body>
 <header class="header" id="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__logo">
-                <div class="logo">
-                    <div class="notes-icon">
-                        <img src="img/logo/icon.svg" alt="logo">
-                    </div>
-                    <div class="smart-notes-logo">
-                        <img class="logo" src="img/logo/smart_notes.svg" alt="smart-notes">
-                    </div>
+    <div class="header__inner">
+        <div class="header__logo">
+            <div class="logo">
+                <div class="notes-icon">
+                    <img src="img/logo/icon.svg" alt="logo">
+                </div>
+                <div class="smart-notes-logo">
+                    <img class="logo" src="img/logo/smart_notes.svg" alt="smart-notes">
                 </div>
             </div>
-            <nav class="navbar" id="navbar">
-                <a href="#" class="navbar__link">Features</a>
-                <a href="#" class="navbar__link">Pricing</a>
-                <a href="#" class="navbar__link">Support</a>
-            </nav>
-            <button class="get-started">
-                <span>Get Started</span>
-                <img src="img/arrow.svg" alt="arrow">
-            </button>
         </div>
-        <!-- header__inner -->
+        <nav class="navbar" id="navbar">
+            <a href="#" class="navbar__link">Features</a>
+            <a href="#" class="navbar__link">Pricing</a>
+            <a href="#" class="navbar__link">Support</a>
+        </nav>
+        <button class="base-button get-started">
+            <span>Get Started</span>
+            <img src="img/arrow.svg" alt="arrow">
+        </button>
     </div>
-    <!-- container -->
+    <!-- header__inner -->
 </header>
 
-<section class="hero">
-    This is future hero section!
+<section class="hero" id="hero">
+    <div class="hero-section__inner">
+        <div class="hero-subcontainer">
+            <div class="hero-text">
+                <h1>
+                    <strong>Intelligent</strong> cloud-based <br>
+                    <strong>note-taking</strong> and <br>
+                    collaboration tool
+                </h1>
+                <div class="text-wrapper">
+                    Experience the power of smart note-taking and transform the way you work today.
+                </div>
+            </div>
+
+            <div class="base-input-container signup-container">
+                <label>
+                    <input class="email-text" type="email" placeholder="Enter your email"
+                           value="Enter your email"
+                           onfocus="if(this.value === 'Enter your email') { this.value = ''; }"
+                           onblur="if(this.value === '') { this.value = 'Enter your email'; }">
+                </label>
+                <button class="base-button signup-button">
+                    <span class="signup-text">Sign up</span>
+                    <img src="img/arrow.svg" alt="arrow">
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-section-shape">
+            <img src="img/shapes/hero-section-shape.svg" alt="hero-section-shape">
+        </div>
+    </div>
 </section>
 
 <footer class="footer">
@@ -56,7 +83,17 @@
                 </div>
                 <!-- mail-us-subcontainer__logo -->
 
-                <!-- todo: place input e-mail field here-->
+                <div class="base-input-container mail-us-subcontainer__email">
+                    <label>
+                        <input class="email-text" type="email" placeholder="email@smartnote.io"
+                               value="email@smartnote.io"
+                               onfocus="if(this.value === 'email@smartnote.io') { this.value = ''; }"
+                               onblur="if(this.value === '') { this.value = 'email@smartnote.io'; }">
+                    </label>
+                    <span class="email-icon">
+                        <img src="img/arrow-green-btn.svg" alt="arrow-green">
+                    </span>
+                </div>
             </div>
             <!-- mail-us-subcontainer -->
 
