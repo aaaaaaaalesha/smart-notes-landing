@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
@@ -21,6 +21,9 @@ h1 {
 
 p {
     margin: 0;
+    font-size: 16px;
+    color: #BABABA;
+    line-height: 150%;
 }
 
 strong {
@@ -55,6 +58,10 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+hr {
+    color: #048C80;
 }
 
 body {
@@ -109,6 +116,9 @@ body {
 
 /*Base Classes*/
 #header {
+    /* Bottom green border  */
+    border-bottom: 0.5px solid #048C80;
+
     a {
         text-decoration: none;
     }
@@ -281,7 +291,108 @@ body {
     }
 }
 
+#features {
+    position: relative;
+
+    .features-section__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 144px;
+        gap: 88px;
+
+        .features-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 24px;
+            padding-left: 232px;
+            padding-right: 232px;
+
+            text-align: center;
+
+            h2 {
+                font-size: 48px;
+                line-height: 120%;
+            }
+
+            p {
+                max-width: 410px;
+            }
+        }
+
+        .features-cards {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(2, auto);
+            justify-content: space-between;
+            gap: 20px;
+
+            max-width: 1152px;
+
+
+            .cross-platform-card {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+
+            }
+
+            .custom-template-card {
+                grid-row: 1;
+                grid-column: 3 / span 4;
+            }
+
+            .feature-card {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                padding: 32px;
+                border-radius: 12px;
+                border: 0.5px solid #048C80;
+
+                max-width: 561px;
+                min-width: 269px;
+
+                .feature-icon {
+                    display: flex;
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .feature-content {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+
+                    gap: 16px;
+
+                    h4 {
+                        font-size: 20px;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+
+    .features-background-shape {
+        position: absolute;
+        top: calc(50% - 148px / 2 + 119px);
+        left: 574px;
+        width: 136px;
+        height: 148px;
+        filter: blur(82px);
+    }
+}
+
 #footer {
+    /* Bottom green border  */
+    border-top: 0.5px solid #048C80;
+
     .info-container {
         display: flex;
         flex-direction: row;
