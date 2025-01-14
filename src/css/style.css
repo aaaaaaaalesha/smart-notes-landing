@@ -27,7 +27,7 @@ p {
 }
 
 strong {
-    background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+    background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-    background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+    background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -76,7 +76,6 @@ body {
     justify-content: center;
     align-items: center;
 
-
     .notes-icon {
         display: flex;
         border-radius: 8px;
@@ -84,7 +83,7 @@ body {
         align-items: center;
         height: 38px;
         width: 38px;
-        background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+        background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
     }
 
     :hover {
@@ -92,9 +91,61 @@ body {
     }
 }
 
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 33px;
+    position: relative;
+
+    .slider {
+        /* The track */
+        position: absolute;
+        cursor: pointer;
+        background-color: #BABABA;
+        padding: 6px;
+
+        border: 1px solid #048C80;
+        border-radius: 24px;
+        width: 100%;
+        height: 100%;
+        transition: background-color 0.3s;
+    }
+
+    input {
+        /* Hide default checkbox */
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input:checked + .slider {
+        /* Toggled state */
+        background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
+    }
+
+    input:checked + .slider::before {
+        /* Toggled state */
+        transform: translateX(34px);
+    }
+}
+
+/* The circle-slider */
+.slider::before {
+    display: flex;
+    content: "";
+    position: absolute;
+    height: 21px;
+    width: 19px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
 .base-button {
     border: none;
-    background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+    background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
 }
 
 .base-button:hover,
@@ -113,6 +164,30 @@ body {
     /*Use for input container shape*/
     border-radius: 8px;
     background-color: #EFECE6;
+}
+
+.section-text-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+    padding-left: 232px;
+    padding-right: 232px;
+
+    text-align: center;
+
+    h2 {
+        font-size: 48px;
+        line-height: 120%;
+    }
+
+    p {
+        max-width: 410px;
+        mix-blend-mode: normal;
+        opacity: 0.7;
+    }
 }
 
 /*Base Classes*/
@@ -394,28 +469,6 @@ body {
         padding: 70px 144px;
         gap: 88px;
 
-        .features-heading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            gap: 24px;
-            padding-left: 232px;
-            padding-right: 232px;
-
-            text-align: center;
-
-            h2 {
-                font-size: 48px;
-                line-height: 120%;
-            }
-
-            p {
-                max-width: 410px;
-            }
-        }
-
         .features-cards {
             display: grid;
             grid-template-columns: repeat(4, auto);
@@ -478,6 +531,147 @@ body {
         width: 136px;
         height: 148px;
         filter: blur(82px);
+    }
+}
+
+#pricing {
+    .pricing-section__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 40px;
+    }
+
+    .monthly-plan, .yearly-plan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pricing-plan-toggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap: 14px;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        .toggle-plan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sale-tag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            padding: 8px 16px;
+
+            width: 94px;
+            height: 26px;
+            border-radius: 40px;;
+            background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
+
+            color: #080808;
+            font-size: 14px;
+            text-align: center
+        }
+    }
+
+
+    .pricing-plan-cards {
+        /* Cards */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+
+        .pricing-plan-card {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding: 40px 32px;
+            width: 357px;
+            /*height: 433px;*/
+
+            border: 1px solid #048C80;
+            border-radius: 10px;
+
+            .card-header {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .card-price {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: end;
+
+                .cost {
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 120%;
+                }
+
+                .period {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+            }
+
+            .card-checklist {
+                display: flex;
+                flex-direction: column;
+
+                ul {
+                    padding-left: 25px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                li {
+                    list-style-image: url(../img/pricing/checkbox-mark.svg);
+                }
+
+                li:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .card-confirm {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .no-card-info {
+                    width: 130px;
+                    height: 8px;
+
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 150%;
+
+                    /* Primary 200 */
+                    color: #737373;
+
+                    mix-blend-mode: normal;
+                    opacity: 0.7;
+                }
+
+            }
+        }
     }
 }
 

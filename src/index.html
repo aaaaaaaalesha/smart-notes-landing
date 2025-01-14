@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css"/>
     <title>SmartNotes</title>
-    <script src="main.js"></script>
+
+    <!-- Main Script -->
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
@@ -127,7 +129,7 @@
 
 <section class="features" id="features">
     <div class="features-section__inner">
-        <div class="features-heading">
+        <div class="section-text-heading">
             <h2>
                 Discover the Power of <strong>SmartNotes</strong>
             </h2>
@@ -304,8 +306,123 @@
 
 <section class="pricing" id="pricing">
     <div class="pricing-section__inner">
-
+        <div class="section-text-heading">
+            <h2>
+                <strong>Pricing</strong> & Plans
+            </h2>
+            <p>
+                With lots of unique blocks, you can easily build a page without coding.
+                Build your next landing page.
+            </p>
+        </div>
+        <!-- section-text-heading -->
+        <div class="pricing-plan-toggle">
+            <span class="monthly-plan">Monthly</span>
+            <div class="toggle-plan">
+                <label class="toggle-switch">
+                    <input type="checkbox"/>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <span class="yearly-plan">Yearly</span>
+            <span class="sale-tag">Save 25%</span>
+        </div>
+        <!-- pricing-plan-toggle -->
+        <div class="pricing-plan-cards">
+            <div class="pricing-plan-card white">
+                <div class="card-header">
+                    <div class="icon-wrapper">
+                        <img src="img/pricing/individual-plan.svg" alt="individual-plan">
+                    </div>
+                    <h3>Individual Plan</h3>
+                </div>
+                <div class="card-price">
+                    <div class="cost">$9.99</div>
+                    <div class="period">/ month</div>
+                </div>
+                <div class="card-checklist">
+                    <ul>
+                        <li>Real-time collaboration</li>
+                        <li>AI-powered organization</li>
+                        <li>Customizable templates</li>
+                        <li>5GB cloud storage</li>
+                        <li>Basic integrations</li>
+                    </ul>
+                </div>
+                <div class="card-confirm">
+                    <div class="confirm-button-container">
+                        <button class="base-button">
+                            <span class="signup-text-bold">Start Free Trial</span>
+                            <img src="img/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <span class="no-card-info">No credit card required</span>
+                </div>
+            </div>
+            <div class="pricing-plan-card black">
+                <div class="card-header">
+                    <div class="icon-wrapper">
+                        <img src="img/pricing/team-plan.svg" alt="team-plan">
+                    </div>
+                    <h3>Team Plan</h3>
+                </div>
+                <div class="card-price">
+                    <div class="cost">$19.99</div>
+                    <div class="period">/ month</div>
+                </div>
+                <div class="card-checklist">
+                    <ul>
+                        <li>Everything in the Individual Plan</li>
+                        <li>Unlimited cloud storage</li>
+                        <li>Advanced integrations</li>
+                        <li>Team management and permissions</li>
+                        <li>Shared templates and note libraries</li>
+                    </ul>
+                </div>
+                <div class="card-confirm">
+                    <div class="confirm-button-container">
+                        <button class="base-button">
+                            <span class="signup-text-bold">Sign Up for Free</span>
+                            <img src="img/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                    <span class="no-card-info">No credit card required</span>
+                </div>
+            </div>
+            <div class="pricing-plan-card white">
+                <div class="card-header">
+                    <div class="icon-wrapper">
+                        <img src="img/pricing/enterprise-plan.svg" alt="enterprise-plan">
+                    </div>
+                    <h3>Enterprise Plan</h3>
+                </div>
+                <div class="card-price">
+                    <div class="cost">Custom</div>
+                </div>
+                <div class="card-checklist">
+                    <ul>
+                        <li>Everything in the Team Plan</li>
+                        <li>Dedicated account manager</li>
+                        <li>Enterprise-grade security</li>
+                        <li>Customized onboarding</li>
+                        <li>Advanced analytics</li>
+                    </ul>
+                </div>
+                <div class="card-confirm">
+                    <div class="confirm-button-container">
+                        <button class="base-button">
+                            <span class="signup-text-bold">Contact Support</span>
+                            <img src="img/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+                <!-- card-confirm -->
+            </div>
+            <!-- pricing-plan-card-->
+        </div>
+        <!-- pricing-plan-cards -->
     </div>
+    <!-- pricing-section__inner -->
 </section>
 
 <section class="testimonial" id="fourth-testimonial">
@@ -335,12 +452,14 @@
     <div class="integrations-section__inner">
 
     </div>
+    <!-- integrations-section__inner -->
 </section>
 
 <section class="faqs" id="faqs">
     <div class="faqs-section__inner">
 
     </div>
+    <!-- faqs-section__inner -->
 </section>
 
 <section class="testimonial" id="fifth-testimonial">
@@ -393,6 +512,7 @@
             <img src="img/shapes/cta-shape.svg" alt="cta-shape">
         </div>
     </div>
+    <!-- cta-section__inner -->
 </section>
 
 <footer class="footer" id="footer">
