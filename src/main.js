@@ -1,30 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Listeners for signup-buttons.
+    const signupBtns = document.querySelectorAll(
+        ".signup-button, .get-started, .signup-icon"
+    );
+    const focusTo = document.getElementById("hero");
+    for (let signupButton of signupBtns) {
+        // If there is input processing button here, flush input filed. 
+        let prevElement = signupButton.previousElementSibling;
+        if (prevElement !== null && prevElement.tagName.toLowerCase() === "label") {
+            signupButton.addEventListener("click", function () {
+                let inputElement = prevElement.querySelector("input");
+                inputElement.value = inputElement.placeholder;
+                // Action moves focus.
+                focusTo.scrollIntoView({behavior: 'smooth'});
+            });
+            continue;
+        }
+        // Action moves focus.
+        signupButton.addEventListener("click", function () {
+            focusTo.scrollIntoView({behavior: 'smooth'});
+        });
+    }
+
+    // Listeners for `video` tag.
     const video = document.getElementById("product-video");
     const playButton = document.getElementById("play-button");
 
-    // Обработчик для кнопки "Play"
+    // Play button click handler to start and stop video.
     playButton.addEventListener("click", function () {
         if (video.paused) {
-            video.style.display = "block"; // Показываем видео
+            // Show button
+            video.style.display = "block";
             video.play();
-            playButton.style.display = "none"; // Скрываем кнопку
+            // Hide button.
+            playButton.style.display = "none";
         }
     });
 
-    // Обработчик для клика на видео.
+    // Video click handler to its start and stop.
     video.addEventListener("click", function () {
         if (!video.paused) {
-            video.pause(); // Ставим видео на паузу
-            playButton.style.display = "block"; // Показываем кнопку "Play"
+            video.pause();
+            // Show button.
+            playButton.style.display = "block";
         } else {
-            video.play(); // Возобновляем воспроизведение
-            playButton.style.display = "none"; // Скрываем кнопку
+            video.play();
+            // Hide button.
+            playButton.style.display = "none";
         }
     });
 
-    // Показать кнопку "Play" снова, если видео завершено.
+    // Show button again if video has been ended.
     video.addEventListener("ended", function () {
-        // Показываем кнопку "Play" при завершении.
         playButton.style.display = "block";
     });
 });

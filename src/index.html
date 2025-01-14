@@ -38,7 +38,7 @@
 <section class="hero" id="hero">
     <div class="hero-section__inner">
         <div class="hero-subcontainer">
-            <div class="hero-text">
+            <div class="pre-signup-text">
                 <h1>
                     <strong>Intelligent</strong> cloud-based
                     <strong>note-taking</strong> and
@@ -49,14 +49,14 @@
                 </div>
             </div>
 
-            <div class="base-input-container signup-container">
+            <div class="base-input-container signup-container signup-input-styles">
                 <label>
                     <input class="email-text" type="email" placeholder="Enter your email"
                            value="Enter your email"
                            onfocus="if(this.value === 'Enter your email') { this.value = ''; }"
                            onblur="if(this.value === '') { this.value = 'Enter your email'; }">
                 </label>
-                <button class="base-button signup-button">
+                <button class="base-button signup-button button-default">
                     <span class="signup-text">Sign up</span>
                     <img src="img/arrow.svg" alt="arrow">
                 </button>
@@ -271,10 +271,12 @@
                 </p>
             </video>
             <button class="play-button" id="play-button">
-                <img src="img/video/play-button.svg" alt="Play">
+                <img src="img/video/play-button.svg" alt="play">
             </button>
         </div>
+        <!-- video-container -->
     </div>
+    <!-- video-section__inner -->
 </section>
 
 <section class="testimonial" id="third-testimonial">
@@ -329,6 +331,18 @@
     </div>
 </section>
 
+<section class="integrations" id="integrations">
+    <div class="integrations-section__inner">
+
+    </div>
+</section>
+
+<section class="faqs" id="faqs">
+    <div class="faqs-section__inner">
+
+    </div>
+</section>
+
 <section class="testimonial" id="fifth-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
@@ -348,6 +362,35 @@
                     TechSavvv Solutions
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="cta">
+    <div class="cta-section__inner">
+        <div class="cta-subcontainer">
+            <div class="pre-signup-text">
+                <h1>
+                    Unlock the Full Potential of
+                    <strong>SmartNotes</strong>
+                </h1>
+                <div class="text-wrapper">
+                    Ready to streamline your workflow and boost your productivity?
+                    Start your free trial of SmartNotes today and experience the power of smart note-taking.
+                </div>
+            </div>
+
+            <div id="bottom-signup" class="signup-container">
+                <button class="base-button signup-button button-long">
+                    <span class="signup-text-bold">Sign Up for Free</span>
+                    <img src="img/arrow.svg" alt="arrow">
+                </button>
+            </div>
+        </div>
+        <!-- hero-subcontainer -->
+
+        <div class="hero-section-shape">
+            <img src="img/shapes/cta-shape.svg" alt="cta-shape">
         </div>
     </div>
 </section>
@@ -375,7 +418,7 @@
                                onfocus="if(this.value === 'email@smartnote.io') { this.value = ''; }"
                                onblur="if(this.value === '') { this.value = 'email@smartnote.io'; }">
                     </label>
-                    <span class="email-icon">
+                    <span class="signup-icon">
                         <img src="img/arrow-green-btn.svg" alt="arrow-green">
                     </span>
                 </div>
