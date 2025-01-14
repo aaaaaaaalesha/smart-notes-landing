@@ -76,6 +76,7 @@ body {
     justify-content: center;
     align-items: center;
 
+
     .notes-icon {
         display: flex;
         border-radius: 8px;
@@ -84,6 +85,10 @@ body {
         height: 38px;
         width: 38px;
         background-image: linear-gradient(238deg, #AAD9D1 0%, #017373 100%);
+    }
+
+    :hover {
+        cursor: pointer;
     }
 }
 
