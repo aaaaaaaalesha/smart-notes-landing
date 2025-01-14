@@ -60,10 +60,6 @@ ul {
     margin: 0;
 }
 
-hr {
-    color: #048C80;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -242,7 +238,8 @@ body {
     }
 }
 
-#testimonial {
+/* Class here to reuse in five different quotes. */
+.testimonial {
     .testimonial-section__inner {
         display: flex;
         flex-direction: row;
@@ -285,6 +282,80 @@ body {
                 .quote-author__company {
                     color: #737373;
                     background-blend-mode: normal;
+                }
+            }
+        }
+    }
+}
+
+#video {
+    /* Shapes */
+    position: relative;
+
+    .video-background-shape {
+        position: absolute;
+        opacity: 0.7;
+        filter: blur(46px);
+    }
+
+    .video-top-shape {
+        width: 425px;
+        left: 0;
+        top: -125px;
+    }
+
+    .video-bottom-shape {
+        transform: rotate(45.54deg);
+        width: 345px;
+        height: 345px;
+        right: -135px;
+        bottom: 145px;
+    }
+
+    /* Content */
+
+    .video-section__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 165px 64px;
+
+        .video-container {
+            position: relative;
+            max-width: 1110px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+
+            video {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                /* Button on the foreground. */
+                z-index: 10;
+
+                img {
+                    width: 144px;
+                    height: 144px;
+                }
+
+                /*For mobiles and tablets.*/
+                @media (max-width: 768px) {
+                    img {
+                        width: 66px;
+                        height: 66px;
+                    }
                 }
             }
         }
