@@ -4,25 +4,23 @@
  * @function setupSignupButtons
  */
 export function setupSignupButtons() {
-    const signupBtns = document.querySelectorAll(
+    const signupButtons = document.querySelectorAll(
         ".signup-button, .get-started, .signup-icon"
     );
     const focusTo = document.getElementById("hero");
-    for (let signupButton of signupBtns) {
-        // If there is input processing button here, flush input filed.
-        let prevElement = signupButton.previousElementSibling;
+
+    signupButtons.forEach(button => {
+        const prevElement = button.previousElementSibling;
         if (prevElement !== null && prevElement.tagName.toLowerCase() === "label") {
-            signupButton.addEventListener("click", function () {
-                let inputElement = prevElement.querySelector("input");
+            button.addEventListener("click", function () {
+                const inputElement = prevElement.querySelector("input");
                 inputElement.value = inputElement.placeholder;
-                // Action moves focus.
                 focusTo.scrollIntoView({behavior: "smooth"});
             });
-            continue;
+        } else {
+            button.addEventListener("click", function () {
+                focusTo.scrollIntoView({behavior: "smooth"});
+            });
         }
-        // Action moves focus.
-        signupButton.addEventListener("click", function () {
-            focusTo.scrollIntoView({behavior: "smooth"});
-        });
-    }
+    });
 }
