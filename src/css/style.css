@@ -58,6 +58,11 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
+    li {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 body {
@@ -145,11 +150,14 @@ body {
 
 .base-button {
     border: none;
+    background-color: #EFECE6;
+}
+
+.green-button {
     background-image: linear-gradient(234.07deg, #AAD9D1 0%, #017373 125.68%);
 }
 
-.base-button:hover,
-.base-button:focus {
+.base-button:hover, .base-button:focus {
     cursor: pointer;
     opacity: 0.9;
     outline: 0;
@@ -540,6 +548,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        padding: 96px 144px;
         gap: 40px;
     }
 
@@ -591,14 +600,16 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: stretch;
         gap: 30px;
 
         .pricing-plan-card {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             gap: 32px;
             padding: 40px 32px;
-            width: 357px;
+            width: 358px;
             /*height: 433px;*/
 
             border: 1px solid #048C80;
@@ -608,6 +619,21 @@ body {
                 display: flex;
                 flex-direction: row;
                 gap: 8px;
+
+                .icon-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    color: #048C80;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
             }
 
             .card-price {
@@ -637,6 +663,7 @@ body {
                     padding-left: 25px;
                     font-weight: 400;
                     font-size: 16px;
+                    font-style: normal;
                     line-height: 150%;
                 }
 
@@ -655,21 +682,53 @@ body {
                 justify-content: center;
                 align-items: center;
 
-                .no-card-info {
-                    width: 130px;
-                    height: 8px;
+                .confirm-button-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
+                    width: 100%;
+
+                    .card-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        width: 100%;
+                        height: 59px;
+                        gap: 8px;
+
+                        border: 1px solid #048C80;
+                        border-radius: 8px;
+
+                        font-size: 18px;
+                    }
+                }
+
+                .no-card-info {
+                    display: flex;
+                    padding-top: 8px;
                     font-weight: 400;
                     font-size: 12px;
                     line-height: 150%;
-
-                    /* Primary 200 */
                     color: #737373;
-
                     mix-blend-mode: normal;
                     opacity: 0.7;
                 }
 
+            }
+        }
+
+        .white {
+            background-color: #F7F7F7;
+            color: #080808;
+            font-size: 16px;
+        }
+
+        .black {
+            .card-checklist ul {
+                color: #BABABA
             }
         }
     }
