@@ -15,7 +15,6 @@ h1 {
     line-height: 106%;
     letter-spacing: -0.01em;
     width: 670px;
-    font-style: normal;
     font-size: 59px;
 }
 
@@ -371,7 +370,6 @@ body {
                 text-align: center;
                 font-size: 24px;
                 font-weight: bold;
-                font-style: normal;
             }
 
             .quote-author {
@@ -486,11 +484,9 @@ body {
 
             max-width: 1152px;
 
-
             .cross-platform-card {
                 grid-row: 1;
                 grid-column: 1 / span 2;
-
             }
 
             .custom-template-card {
@@ -566,7 +562,6 @@ body {
         gap: 14px;
 
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
         line-height: 150%;
 
@@ -630,7 +625,6 @@ body {
                     align-items: center;
                     color: #048C80;
                     font-size: 14px;
-                    font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
                 }
@@ -663,7 +657,6 @@ body {
                     padding-left: 25px;
                     font-weight: 400;
                     font-size: 16px;
-                    font-style: normal;
                     line-height: 150%;
                 }
 
@@ -733,6 +726,109 @@ body {
         }
     }
 }
+
+#integrations {
+    background-color: #FFFFFF;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .integrations-section__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 120px 190px 84px;
+
+        row-gap: 64px;
+        column-gap: 40px;
+
+        .integrations-heading {
+            display: flex;
+            justify-content: space-between;
+
+            .title-block {
+                display: flex;
+                flex-direction: column;
+
+                .caption {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .caption-text {
+                        padding: 4px;
+                        color: #454F5F;
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+
+                h2 {
+                    margin-top: 8px;
+                    color: #3E376C;
+                    font-weight: 500;
+                    font-size: 40px;
+                    line-height: 48px;
+                    letter-spacing: -0.02em;
+                }
+
+                p {
+                    margin-top: 24px;
+                    color: #454F5F;
+                    width: 508px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .view-all {
+                display: flex;
+                justify-content: flex-end;
+
+                .view-all-button {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 12px 24px;
+                    width: 100%;
+                    gap: 8px;
+
+                    border: none;
+                    background: none;
+
+                    color: #5D53A2;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .apps-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(3, auto);
+
+            .app-card {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(2, auto);
+                justify-content: space-between;
+                row-gap: 16px;
+                column-gap: 24px;
+
+                .app-logo {
+                    grid-row: 1 / span 2;
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+}
+
 
 #footer {
     /* Bottom green border  */
