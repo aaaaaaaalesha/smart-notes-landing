@@ -765,7 +765,7 @@ body {
 #integrations {
     display: flex;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: white;
 
     button {
         display: flex;
@@ -828,7 +828,8 @@ body {
 
             .view-all {
                 display: flex;
-                justify-content: flex-end;
+                align-self: flex-end;
+                max-height: 44px;
 
                 .view-all-button {
                     display: flex;
@@ -845,6 +846,11 @@ body {
                     font-size: 14px;
                     line-height: 20px;
                 }
+
+                :hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -852,6 +858,22 @@ body {
             display: grid;
             grid-template-columns: repeat(2, auto);
             grid-template-rows: repeat(3, auto);
+            row-gap: 64px;
+            column-gap: 40px;
+
+            h3 {
+                color: #454F5F;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            p {
+                color: #454F5F;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+            }
 
             .app-card {
                 display: grid;
@@ -861,9 +883,32 @@ body {
                 row-gap: 16px;
                 column-gap: 24px;
 
+                max-width: 510px;
+                width: 100%;
+
                 .app-logo {
                     grid-row: 1 / span 2;
                     grid-column: 1;
+                }
+
+                .connect-app {
+                    display: flex;
+
+                    .connect-app-button {
+                        display: flex;
+                        gap: 4px;
+                        border-radius: 16px;
+                        padding: 8px 16px;
+
+
+                    }
+
+                    :hover {
+                        background-color: #3E376C;
+                        color: white;
+                        fill: white;
+                        stroke: white;
+                    }
                 }
             }
         }
