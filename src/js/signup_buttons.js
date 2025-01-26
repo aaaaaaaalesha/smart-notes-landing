@@ -8,19 +8,15 @@ export function setupSignupButtons() {
         ".signup-button, .get-started, .signup-icon"
     );
     const focusTo = document.getElementById("hero");
-
     signupButtons.forEach(button => {
-        const prevElement = button.previousElementSibling;
-        if (prevElement !== null && prevElement.tagName.toLowerCase() === "label") {
-            button.addEventListener("click", function () {
+        button.addEventListener("click", (event) => {
+            const button = event.currentTarget;
+            const prevElement = button.previousElementSibling;
+            if (prevElement !== null && prevElement.tagName.toLowerCase() === "label") {
                 const inputElement = prevElement.querySelector("input");
                 inputElement.value = inputElement.placeholder;
-                focusTo.scrollIntoView({behavior: "smooth"});
-            });
-        } else {
-            button.addEventListener("click", function () {
-                focusTo.scrollIntoView({behavior: "smooth"});
-            });
-        }
+            }
+            focusTo.scrollIntoView({behavior: "smooth"});
+        });
     });
 }

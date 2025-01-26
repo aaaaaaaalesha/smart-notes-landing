@@ -1,38 +1,41 @@
 /**
- * Set up the video player and the play button.
- *
- * @function setupVideo
+ * Sets up a video to play or pause when its container is clicked.
+ * @function
  */
 export function setupVideo() {
+    const videoContainer = document.getElementById("video");
     const video = document.getElementById("product-video");
     const playButton = document.getElementById("play-button");
 
-    // Play button click handler to start and stop video.
-    playButton.addEventListener("click", function () {
-        if (video.paused) {
-            // Show button
-            video.style.display = "block";
-            video.play();
-            // Hide button.
-            playButton.style.display = "none";
-        }
+    // Toggle video play/pause on click.
+    videoContainer.addEventListener("click", function (event) {
+        if (![playButton, video].includes(event.target)) return;
+        toggleVideo(video, playButton);
     });
-
-    // Video click handler to its start and stop.
-    video.addEventListener("click", function () {
-        if (!video.paused) {
-            video.pause();
-            // Show button.
-            playButton.style.display = "block";
-        } else {
-            video.play();
-            // Hide button.
-            playButton.style.display = "none";
-        }
-    });
-
     // Show button again if video has been ended.
-    video.addEventListener("ended", function () {
+    videoContainer.addEventListener("ended", function () {
         playButton.style.display = "block";
     });
+}
+
+/**
+ * Toggle video play/pause state.
+ *
+ * If the video is currently paused, show the video and play it. Hide the
+ * play button. Otherwise, pause the video and show the play button.
+ *
+ * @param {HTMLVideoElement} video - The video element.
+ * @param {HTMLButtonElement} playButton - The play button element.
+ */
+function toggleVideo(video, playButton) {
+    if (video.paused) {
+        video.style.display = "block";
+        video.play().then(() => {
+            // Скрыть кнопку.
+            playButton.style.display = "none";
+        });
+    } else {
+        video.pause();
+        playButton.style.display = "block";
+    }
 }

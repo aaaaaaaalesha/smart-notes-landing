@@ -36,7 +36,7 @@
     <!-- header__inner -->
 </header>
 
-<section class="hero" id="hero">
+<div class="hero" id="hero">
     <div class="hero-section__inner">
         <div class="hero-subcontainer">
             <div class="pre-signup-text">
@@ -52,7 +52,7 @@
 
             <div class="base-input-container signup-container signup-input-styles">
                 <label>
-                    <input class="email-text" type="email" placeholder="Enter your email"
+                    <input id="hero-email-input" class="email-text" type="email" placeholder="Enter your email"
                            value="Enter your email"
                            onfocus="if(this.value === 'Enter your email') { this.value = ''; }"
                            onblur="if(this.value === '') { this.value = 'Enter your email'; }">
@@ -69,9 +69,9 @@
             <img src="img/shapes/hero-section-shape.svg" alt="hero-section-shape">
         </div>
     </div>
-</section>
+</div>
 
-<section class="logos-spinner" id="logos-spinner">
+<div class="logos-spinner" id="logos-spinner">
     <div class="logos-section__inner">
         <div class="spin-logo">
             <img src="img/logos_lib/elongated_logo.svg" alt="elongated_logo">
@@ -101,9 +101,9 @@
     <div class="gradient-cover">
         <img src="img/shapes/logos-gradient-cover.svg" alt="logos-gradient-cover">
     </div>
-</section>
+</div>
 
-<section class="testimonial" id="first-testimonial">
+<div class="testimonial" id="first-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
             <img src="img/quote.svg" alt="quote-logo">
@@ -124,9 +124,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="features" id="features">
+<div class="features" id="features">
     <div class="features-section__inner">
         <div class="section-text-heading">
             <h2>
@@ -226,9 +226,9 @@
     <div class="features-background-shape">
         <img src="img/shapes/features-shape.svg" alt="features-shape">
     </div>
-</section>
+</div>
 
-<section class="testimonial" id="second-testimonial">
+<div class="testimonial" id="second-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
             <img src="img/quote.svg" alt="quote-logo">
@@ -249,9 +249,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="video" id="video">
+<div class="video" id="video">
     <div class="video-section__inner">
         <div class="video-container">
             <!-- Shapes-->
@@ -278,9 +278,9 @@
         <!-- video-container -->
     </div>
     <!-- video-section__inner -->
-</section>
+</div>
 
-<section class="testimonial" id="third-testimonial">
+<div class="testimonial" id="third-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
             <img src="img/quote.svg" alt="quote-logo">
@@ -301,9 +301,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="pricing" id="pricing">
+<div class="pricing" id="pricing">
     <div class="pricing-section__inner">
         <div class="section-text-heading">
             <h2>
@@ -319,7 +319,7 @@
             <span class="monthly-plan">Monthly</span>
             <div class="toggle-plan">
                 <label class="toggle-switch">
-                    <input type="checkbox"/>
+                    <input id="pricing-slider" type="checkbox"/>
                     <span class="slider"></span>
                 </label>
             </div>
@@ -425,9 +425,9 @@
         <!-- pricing-plan-cards -->
     </div>
     <!-- pricing-section__inner -->
-</section>
+</div>
 
-<section class="testimonial" id="fourth-testimonial">
+<div class="testimonial" id="fourth-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
             <img src="img/quote.svg" alt="quote-logo">
@@ -448,9 +448,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="integrations" id="integrations">
+<div class="integrations" id="integrations">
     <div class="integrations-section__inner">
         <div class="integrations-heading">
             <div class="title-block">
@@ -591,9 +591,9 @@
         <!-- apps-wrapper -->
     </div>
     <!-- integrations-section__inner -->
-</section>
+</div>
 
-<section class="faqs" id="faqs">
+<div class="faqs" id="faqs">
     <div class="faqs-section__inner">
         <div class="section-text-heading">
             <h2>
@@ -676,9 +676,9 @@
         </div>
     </div>
     <!-- faqs-section__inner -->
-</section>
+</div>
 
-<section class="testimonial" id="fifth-testimonial">
+<div class="testimonial" id="fifth-testimonial">
     <div class="testimonial-section__inner">
         <div class="quote-logo">
             <img src="img/quote.svg" alt="quote-logo">
@@ -699,9 +699,9 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="cta" id="cta">
+<div class="cta" id="cta">
     <div class="cta-section__inner">
         <div class="cta-subcontainer">
             <div class="pre-signup-text">
@@ -729,7 +729,7 @@
         </div>
     </div>
     <!-- cta-section__inner -->
-</section>
+</div>
 
 <footer class="footer" id="footer">
     <div class="footer__inner">
@@ -749,7 +749,7 @@
 
                 <div class="base-input-container mail-us-subcontainer__email">
                     <label>
-                        <input class="email-text" type="email" placeholder="email@smartnote.io"
+                        <input id="footer-email-input" class="email-text" type="email" placeholder="email@smartnote.io"
                                value="email@smartnote.io"
                                onfocus="if(this.value === 'email@smartnote.io') { this.value = ''; }"
                                onblur="if(this.value === '') { this.value = 'email@smartnote.io'; }">
@@ -811,10 +811,10 @@
 
     <div class="foot-color-wrapper">
         <div class="bottom-container">
-            <div class="copyright">
+            <address class="copyright">
                 &copy; 2024 SmartNotes. All Rights Reserved.
                 <a href="https://twitter.com/iamhervewabo">@iamhervewabo</a>
-            </div>
+            </address>
             <div class="socials">
                 <div class="social-icon">
                     <img src="img/socials/facebook.svg" alt="facebook">
